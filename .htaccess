@@ -1,0 +1,14 @@
+# Aktifkan Rewrite Engine
+RewriteEngine On
+
+# Cegah akses langsung ke folder direktori (Directory Browsing)
+Options -Indexes
+
+# Set default file halaman utama
+DirectoryIndex views/auth/login.php views/dashboard.php index.php
+
+# Mencegah akses langsung ke file sensitif atau file konfigurasi
+<FilesMatch "^\.ht|database\.php">
+    Order allow,deny
+    Deny from all
+</FilesMatch>

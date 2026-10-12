@@ -1,0 +1,56 @@
+c:\Us# Entity Relationship Diagram (ERD) - Inventory System
+
+```mermaid
+erDiagram
+    USERS ||--o{ STOCK_MOVEMENTS : "pencatat"
+    CATEGORIES ||--o{ PRODUCTS : "memiliki"
+    PRODUCTS ||--o{ STOCK_MOVEMENTS : "memiliki riwayat"
+    SUPPLIERS ||--o{ STOCK_MOVEMENTS : "pemasok (opsional)"
+
+    USERS {
+        int id PK
+        string username
+        string password
+        string name
+        enum role "ADMIN / STAFF"
+        datetime created_at
+    }
+
+    CATEGORIES {
+        int id PK
+        string name
+        text description
+        datetime created_at
+    }
+
+    PRODUCTS {
+        int id PK
+        int category_id FK
+        string sku "UNIQUE"
+        string name
+        text description
+        decimal price "Harga Jual/Beli"
+        int stock
+        int minimum_stock
+        datetime created_at
+    }
+
+    SUPPLIERS {
+        int id PK
+        string name
+        string email
+        string phone
+        text address
+        datetime created_at
+    }
+
+    STOCK_MOVEMENTS {
+        int id PK
+        int product_id FK
+        int user_id FK
+        int supplier_id FK "NULLABLE"
+        enum type "IN / OUT"
+        int quantity
+        text notes
+        datetime created_at
+    }ers\ASUS\Downloads\ERD.png
