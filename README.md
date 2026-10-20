@@ -64,3 +64,26 @@ inventory-app/
 │   │   └── print.php        # Tampilan Cetak / Save PDF
 │   └── dashboard.php        # Ringkasan Statistik Utama
 └── README.md
+
+
+---
+
+## 📸 Tampilan Aplikasi (Screenshots)
+
+### 1. Halaman Login
+![Login](screenshots/login.png)
+
+### 2. Dashboard Utama
+![Dashboard](screenshots/dashboard.png)
+
+### 3. Data Kategori
+![Kategori](screenshots/categories.png)
+
+### 4. Data Produk
+![Produk](screenshots/products.png)
+
+### 5. Transaksi Stok (Masuk & Keluar)
+![Transaksi Stok](screenshots/stock.png)
+
+### 6. Laporan Inventory
+![Laporan](screenshots/reports.png)
